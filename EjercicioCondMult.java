@@ -23,17 +23,18 @@ public class EjercicioCondMult {
     public static void main(String[] args) {        
         EjercicioCondMult objx=new EjercicioCondMult();
         
-        Scanner lt=new Scanner(System.in);
-        System.out.println("Ingrese el algoritmo que desea probar\n1=Profesor"+
-        "\n2=Estudiante\n3=Maquina\n4=Proyector");
-        int opcMet=lt.nextInt();
-        switch (opcMet) {
-            case 1:{ profesor();  } break;
-            case 2: estudainte();  break;
-            case 3: objx.maquinaPC(); break;
-            case 4: objx.proyector(); break;
-        
-            default: System.err.println("Opcion no existe"); break;
+         (Scanner lt = new Scanner(System.in)) {
+            System.out.println("Ingrese el algoritmo que desea probar\n1=Profesor"+
+            "\n2=Estudiante\n3=Maquina\n4=Proyector");
+            int opcMet=lt.nextInt();
+            switch (opcMet) {
+                case 1:{ profesor();  } break;
+                case 2: estudainte();  break;
+                case 3: objx.maquinaPC(); break;
+                case 4: objx.proyector(); break;
+            
+                default: System.err.println("Opcion no existe"); break;
+            }
         }
 
 
