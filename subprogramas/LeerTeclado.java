@@ -3,6 +3,8 @@ package subprogramas;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import javax.swing.plaf.synth.SynthPasswordFieldUI;
+
 
 
 /**
@@ -12,8 +14,14 @@ public class LeerTeclado {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));   
     
     public int print(String mensaje, int valor) {
-        return 0;
-        }
+        System.out.println(mensaje+":");
+        try{ 
+        valor=Integer.parseInt(br.readLine());
+    } catch (Exception e){
+        System.err.println("el valor que ingreso es incorrecto");
+    }
+        return valor;
+    }
     
         public String print(String mensaje, String valor) {
          return "0";

@@ -9,7 +9,7 @@ public class ClaseGeneral {
         static Scanner leerT=new Scanner(System.in);
         static Aritmetica obj=new Aritmetica();
         static Persona objP=new Persona();
-
+        static LeerTeclado objLT=new LeerTeclado();
 
     public static void main(String[] args) {
         /*System.out.println("Ingrese el Primer valor");

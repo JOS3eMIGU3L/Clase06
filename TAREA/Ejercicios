@@ -1,0 +1,276 @@
+public class Ejercicio41 {
+        static Scanner lt=new Scanner(System.in);
+        
+            public static void SalarioAnualJMHP() {
+                double salario=1500;
+                int contador=1;
+        
+                while(contador<=6){ 
+                System.out.println("El salario del año " +(contador-1)+ " es:" + salario); 
+                salario=salario+(salario*0.10);
+                contador++;
+             }
+             System.out.println("El salario del año " +(contador-1)+ " es:" + salario);
+            }
+        public static void main(String[] args) {
+            SalarioAnualJMHP();
+            
+        }
+        
+        
+    }
+
+
+    public class Ejercicio42 {
+        static Scanner lt=new Scanner(System.in);
+        public static void BembosJMHP(String[] args) {
+            int n;
+            int tipo;
+            int pago;
+            int total=0;
+            System.out.println("Ingrese el total de hamburguesas");
+            n=lt.nextInt();
+            if (n>0) {
+                System.out.println("Elige una hamburguesa:");
+                System.out.println(" 1=sencilla s./20");
+                System.out.println(" 2=doble s./25");
+                System.out.println(" 3=triple s./28");
+                tipo=lt.nextInt();
+                if (tipo<=3) {
+                    if (tipo==1) {
+                        total=total+20;
+                    }
+                    else if (tipo==2) {
+                        total=total+25;
+                    }
+                    else if (tipo==3) {
+                        total=total+28;
+                        n=n-1;
+                }
+                else if (tipo>3) {
+                System.out.println("Ingrese un numero correcto");
+                }
+                System.out.println("Ingrese el tipo de pago");
+                System.out.println(" 1 = efectivo");
+                System.out.println(" 2 = targeta");
+                pago=lt.nextInt();
+                if (pago<=2) {
+                    if (pago==2) {
+                        total=(int) (total+(total*0.5));
+                        System.out.println("Se aplico un cargo del 5% ");
+                    }
+                    System.out.println("El total a pagar es: s./"+total);
+                }
+                else if (pago>2) {
+                    System.out.println("no exixte ese metodo de pago");
+                }
+            }
+        }
+    }
+    
+    }
+
+
+
+    public class Ejercicio43 {
+        static Scanner lt=new Scanner(System.in);
+        public static void NumerosMayoresCeroJMHP(String[] args) {
+            int a;
+            int i;
+            int c;
+            int d=0;
+            int e=0;
+            int f=0;
+            System.out.println("Ingrese los numeros deseados");
+            a=lt.nextInt();
+    
+            for (i=0;i<a;i++) {
+                System.out.println("Ingrese los numeros");
+                c=lt.nextInt();
+                if (c<0){
+                    d=d+1;
+                    System.out.println("El numero es menor a cero");
+    
+                }
+                else if (c==0) {
+                    e=e+1;
+                    System.out.println("El numero es igual a cero");
+                }
+                else if (c>0) {
+                    f=f+1;
+                    System.out.println("El numero es mayor a cero");
+                }
+                System.out.println("numeros menores a cero:" +d);
+                System.out.println("numeros iguales a cero:" +e);
+                System.out.println("numeros mayores a cero:" +f);
+            }
+        }
+    }
+
+    
+
+    public class Ejercicio48 {
+        static Scanner lt=new Scanner(System.in);
+        public static void InversionTotalJMHP() {
+            int i, n;
+            double enero, febrero, marzo, abril, mayo;
+            double junio, julio, agosto, septiembre, octubre;
+            double noviembre, diciembre, intereses, inversion_final, total;
+            total = 0;
+            System.out.print(" Ingrese los años que invirtio: ");
+            n = lt.nextInt();
+            for (i=1; i<=n; i++) {
+                System.out.print(+ i);
+                System.out.print(" Ingresa el valor de cantidad enero: ");
+                enero = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad febrero: ");
+                febrero = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad marzo: ");
+                marzo = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad abril: ");
+                abril = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad mayo: ");
+                mayo = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad junio: ");
+                junio = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad julio: ");
+                julio = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad agosto: ");
+                agosto = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad septiembre: ");
+                septiembre = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad octubre: ");
+                octubre = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad noviembre: ");
+                noviembre = lt.nextDouble();
+                System.out.print(" Ingresa el valor de cantidad diciembre: ");
+                diciembre = lt.nextDouble();
+                intereses=total*0.1;
+                total=total+intereses+enero+febrero+marzo+abril+mayo+junio+julio+agosto+septiembre+octubre+noviembre+diciembre;
+                inversion_final=total;
+                System.out.println("intereses: " + intereses);
+                System.out.println("inversion final: " + inversion_final);
+                System.out.println();
+            }
+            System.out.println("Inversion total: " + total);
+    }
+    }
+
+
+    public class Ejercicio49 {
+        static Scanner lt=new Scanner(System.in);
+         public static void PromedioJMHP(String[] args) {
+            int alumnos=0;
+            int edad;
+            int n;
+            int salones;
+            int suma;
+            int total=0;
+            int x;
+            System.out.println("Ingresa el total de salones");
+            salones = lt.nextInt();
+            while (salones>0) {
+                System.out.println("Ingresa el numero de alumnos");
+                n = lt.nextInt();
+                suma = 0;
+                for (x=1;x<=n;x++) {
+                    System.out.println("Ingresa la edad "+x);
+                    edad = lt.nextInt();
+                    suma = suma+edad;
+                }
+                System.out.println("El promedio del salon "+salones+" es: "+suma/n+" años");
+                alumnos = alumnos+n;
+                total = total+suma;
+                salones = salones-1;
+            }
+            System.out.println("El promedio de toda la escuela es: "+total/alumnos+" años");
+        }
+    }
+
+
+
+    public class Ejercicio413 {
+        static Scanner lt=new Scanner(System.in);
+        public static void AlumnosJMHP(String[] args) {
+            int n;
+            int aprobados=0;
+            int reprobados=0;
+            double calificacion;
+            System.out.println("Ingrese el numero de alumnos");
+            n=lt.nextInt();
+            if (n>0) {
+                System.out.println("ingrese la calificacion");
+                calificacion=lt.nextInt();
+                if (calificacion<13) {
+                    reprobados=reprobados + 1;
+                }else if (calificacion>=13) {
+                    aprobados=aprobados +1;
+                }
+                n=n-1;
+          }
+          System.out.println("El total de alumnos aprobados es:" + aprobados);
+          System.out.println("El total de alumnos reprobados es:" + reprobados);
+        }
+    }
+
+
+    public class Ejercicio414 {
+        static Scanner lt=new Scanner(System.in);
+        public static void N_alCuboJMHP(String[] args) {
+            int total;
+            int n;
+            System.out.println("Ingrese el total de numeros");
+            total=lt.nextInt();
+            if (total>0) {
+                System.out.println("El numero " + total);
+                System.out.println("Ingrese el valor del cubo es:");
+                n=lt.nextInt();
+                if (n>0) {
+                    n=n*n*n;
+                }
+            }
+            System.out.println("el numero " + total+ " elevado al cubo " + (total*total*total));
+        }
+    }
+
+
+    public class Ejercicio416 {
+        static Scanner lt = new Scanner(System.in);
+        public static void TabladeMultiplicarJMHP(String[] args) {
+        int n;
+        System.out.print("Introduce un número entero: ");                                                         
+        n = lt.nextInt();
+        System.out.println("Tabla del " + n);
+        for(int i = 1; i<=10; i++){
+             System.out.println(n + " * " + i + " = " + n*i);                                                     
+        }
+    }
+    }
+
+
+
+
+    public class Ejercicio422 {
+        public static void MultiplosDeCinco(String[] args) {
+          int i = 0;
+          
+          while(i <= 100) {
+            System.out.println(i);
+            i+=5;
+          }
+        }
+      }
+
+
+      
+
+      public class Ejercicio423 {
+        public static void DecrecionEn20(String[] args) {
+          int i = 320;
+          
+          while(i >= 160) {
+            System.out.println(i);
+            i-=20;
+          }
+        }
+      }
